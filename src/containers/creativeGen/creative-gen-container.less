@@ -1,0 +1,108 @@
+.creative-gen-container {
+	background-color: #FCFCFC;
+
+	.breadcrumb-wrapper {
+	    height: 50px;
+	    line-height: 50px;
+	    background-color: #ebeaec;
+
+	    .ant-breadcrumb {
+	    	font-size: 14px;
+	    }
+	}
+
+	.creative-gen-header {
+		height: 50px;
+		line-height: 50px;
+		background-color: #F9F9F9;
+		border: 1px solid #EFEFEF;
+		font-size: 16px;
+		color: #333333;
+		padding-left: 30px;
+	}
+
+	.creative-gen-component {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		padding: 30px 50px;
+		min-height: 518px;
+
+		.creative-name-form {
+			input {
+				width: 240px;
+				margin-left: 20px;
+			}
+		}
+
+		.tpl-selector-component {
+			margin: 40px 0px;
+
+			.tpl-list-wrapper {
+				margin-top: 16px;
+				width: 100%;
+				max-height: 260px;
+				overflow: auto;
+				border: 1px solid #efefef;
+
+				.tpl-item {
+					display: inline-block;
+					width: 270px;
+					margin-left: 10px;
+    				margin-top: 10px;
+    				margin-bottom: 10px;
+    				padding: 6px;
+    				border: 1px solid transparent;
+    				cursor: pointer;
+    				background-color: #f7f7f7;
+
+    				img {
+    					max-width: 100%;
+					    max-height: 100%;
+					    margin: auto;
+					    display: block;
+    				}
+				}
+
+				.tpl-item.active {
+					border: 1px solid #F63;
+				}
+			}
+		}
+
+		.creative-design-component {
+			.label {
+				float: left;
+				width: 80px;
+			}
+
+			.creative-design-viewer {
+				position:relative;
+				display: flex;
+				flex-direction: column;
+    			align-items: center;
+    			margin-right: 80px;
+    			margin-bottom: 60px;
+								
+				.template-size-info {
+					margin: 10px;
+				}
+			}
+		}
+
+		.btn-group {
+			position: absolute;
+			bottom: 30px;    
+		    left: 0px;
+		    width: 100%;
+			display: flex;
+			background: #FFFFFF;
+			justify-content: center;
+	    	align-items: center;
+
+	    	button {
+	    		margin-right: 20px;
+	    	}
+		}
+	}
+}

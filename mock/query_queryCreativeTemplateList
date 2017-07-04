@@ -1,0 +1,30 @@
+{
+    "code":0,
+    "data": {
+        "slotId":10023,
+        "slotName":"首页大牌推荐",
+        "slotTemplateId":60004,
+        "slotTemplateKey":"picUrl",
+        "creativeTemplatePix":"640*200",
+        "selectedCreativeTemplateId":1,
+        "list": [
+             {
+                "creativeTemplateId":1,
+                "creativeTemplateName":"创意模板测试模板一",
+                "demo":"http://pic.qiantucdn.com/58pic/19/76/24/57123e9c077d5_1024.jpg"
+            },
+             {
+                "creativeTemplateId":2,
+                "creativeTemplateName":"创意模板测试模板二",
+                "demo":"http://pic.qiantucdn.com/58pic/19/76/38/5712448637ea6_1024.jpg"
+            },
+             {
+                "creativeTemplateId":3,
+                "creativeTemplateName":"创意模板测试模板三",
+                "demo":"http://pic.qiantucdn.com/58pic/19/73/81/57107d090e309_1024.jpg"
+            }
+        ]
+    },
+    "message":"按条件获取创意列表失败",
+    "success":true
+}

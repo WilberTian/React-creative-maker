@@ -1,0 +1,38 @@
+.template-text-component {
+	position: absolute;
+	display: block;
+}
+
+.readonly {
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.editable {
+	border: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.text-mask {
+	position: absolute;
+	border: 1px dashed black;
+    background-color: #FFF;
+    opacity: 0.6;
+}
+
+.template-text-color {
+	.ant-tooltip-content {
+		.ant-tooltip-arrow {
+			border-bottom-color: #fff;
+		}
+
+		.ant-tooltip-inner {
+			background-color: #fff;
+			padding: 3px 12px;
+			border-radius: 100px;
+			box-shadow: 0 0 4px 0 rgba(0,0,0,0.20);
+		}
+	}
+}

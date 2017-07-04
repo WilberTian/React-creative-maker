@@ -1,0 +1,114 @@
+{
+    "code":0,
+    "data": {
+        "slotTemplateId":60004,
+        "creativeTemplateId":1,
+        "creativeTemplatePix":"640*200",
+        "creativeId":0,
+        "info": {
+            "status":"1",
+            "addTime":"2017-06-22T18:04:18",
+            "updateTime":"2017-06-22T18:04:18",
+            "containElement": {
+                "elementId": 0,
+                "type":"TemplateContainer",
+                "attrs": {
+                    "bgImgId": 1
+                },
+                "css": {
+                    "width":"500px",
+                    "height":"213px",
+                    "background-color":"bisque"
+                },
+                "elementList": [
+                    {
+                        "elementId": 1,
+                        "type":"TemplateImageComponent",
+                        "field":"elementUrl",
+                        "elementList": [],
+                        "attrs": {
+                            
+                            "width":90,
+                            "height":34,
+                            "maxFileSize":100,
+                            "src":"",
+                            "placeholder": "选择素材图片"
+                        },
+                        "css":{
+                            "bottom": "0px",
+                            "left": "0px",
+                            "width": "213px",
+                            "height": "125px"
+                        }
+                    },
+                    {
+                        "elementId": 2,
+                        "type":"TemplateImageComponent",
+                        "field":"logoUrl",
+                        "elementList": [],
+                        "attrs": {
+                            
+                            "width":90,
+                            "height":34,
+                            "maxFileSize":100,
+                            "src":"",
+                            "placeholder": "选择logo"
+                        },
+                        "css":{
+                            "bottom": "90px",
+                            "left": "364px",
+                            "width": "120px",
+                            "height": "40px"
+                        }
+                    },
+                    {
+                        "elementId": 3,
+                        "type":"TemplateTextComponent",
+                        "field":"title",
+                        "elementList": [],
+                        "attrs": {
+                            
+                            "min":3,
+                            "max":8,
+                            "content": "",
+                            "placeholder": "主标题(3-8个字)"
+                        },
+                        "css":{
+                            "top": "124px",
+                            "left": "227px",
+                            "width": "257px",
+                            "height": "44px",
+                            "line-height": "44px",
+                            "text-align": "right",
+                            "font-size": "34px"
+                        }
+                    },
+                    {
+                        "elementId": 4,
+                        "type":"TemplateTextComponent",
+                        "field":"subtitle",
+                        "elementList": [],
+                        "attrs": {
+                            
+                            "min":8,
+                            "max":14,
+                            "content": "",
+                            "placeholder": "副标题(8-14个字)"
+                        },
+                        "css":{
+                            "top": "170px",
+                            "left": "329px",
+                            "width": "155px",
+                            "height": "24px",
+                            "line-height": "24px",
+                            "text-align": "right",
+                            "font-size": "14px"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "message":"按条件获取创意模板信息成功",
+    "success":true
+}

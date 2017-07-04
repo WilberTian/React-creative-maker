@@ -1,0 +1,15 @@
+{
+    "code":0,
+    "data": {
+        "rules": {
+            "title": {
+                "fontColor": ["#f63", "#abc", "#CCCCCC"]
+            },
+            "subtitle": {
+                "fontColor": ["#abc", "#999"]
+            }
+        }
+    },
+    "message":"",
+    "success":true
+}

@@ -1,0 +1,27 @@
+{
+    "code":0,
+    "data": {
+        "list": [
+            {
+                "addTime":"2017-06-26T15:42:08",
+                "entityId":1,
+                "id":1,
+                "picUrl":"http://pic.qiantucdn.com/58pic/19/76/04/5712361e89776_1024.jpg",
+                "slotTemplateId":60004,
+                "status":1,
+                "updateTime":"2017-07-03T16:49:23"
+            },
+            {
+                "addTime":"2017-06-26T15:42:08",
+                "entityId":2,
+                "id":2,
+                "picUrl":"http://pic.qiantucdn.com/58pic/19/76/03/571235c8a63b8_1024.jpg",
+                "slotTemplateId":60004,
+                "status":1,
+                "updateTime":"2017-07-03T16:49:23"
+            }
+        ]
+    },
+    "message":"获背景素材成功",
+    "success":true
+}

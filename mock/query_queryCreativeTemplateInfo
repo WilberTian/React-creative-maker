@@ -18,7 +18,9 @@
                 "css": {
                     "width":"500px",
                     "height":"213px",
-                    "background-color":"bisque"
+                    "background": "url(http://pic.qiantucdn.com/58pic/19/76/04/5712361e89776_1024.jpg)",
+                    "background-repeat": "no-repeat",
+                    "background-size": "contain"
                 },
                 "elementList": [
                     {

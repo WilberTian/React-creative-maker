@@ -96,6 +96,13 @@ module.exports = {
                     postCSSLoader,
                     'less-loader'
                 ]
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                include: [
+                    path.resolve(rootPath, 'src/fonts')
+                ],
+                use: 'file-loader'
             }
         ]
     },

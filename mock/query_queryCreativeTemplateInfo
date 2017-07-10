@@ -13,11 +13,14 @@
                 "elementId": 0,
                 "type":"TemplateContainer",
                 "attrs": {
-                    "bgImgId": 1
+                    "bgImgId": 1,
+                    "scale": 0.66,
+                    "width": 500,
+                    "height": 213
                 },
                 "css": {
-                    "width":"500px",
-                    "height":"213px",
+                    "width":"750px",
+                    "height":"320px",
                     "background": "url(http://pic.qiantucdn.com/58pic/19/76/04/5712361e89776_1024.jpg)",
                     "background-repeat": "no-repeat",
                     "background-size": "contain"
@@ -57,8 +60,8 @@
                             "placeholder": "选择logo"
                         },
                         "css":{
-                            "bottom": "90px",
-                            "left": "364px",
+                            "bottom": "120px",
+                            "left": "614px",
                             "width": "120px",
                             "height": "40px"
                         }
@@ -76,8 +79,8 @@
                             "placeholder": "主标题(3-8个字)"
                         },
                         "css":{
-                            "top": "124px",
-                            "left": "227px",
+                            "top": "204px",
+                            "left": "477px",
                             "width": "257px",
                             "height": "44px",
                             "line-height": "44px",
@@ -99,8 +102,8 @@
                             "placeholder": "副标题(8-14个字)"
                         },
                         "css":{
-                            "top": "170px",
-                            "left": "329px",
+                            "top": "250px",
+                            "left": "574px",
                             "width": "155px",
                             "height": "24px",
                             "line-height": "24px",

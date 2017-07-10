@@ -43,11 +43,14 @@ export default class TemplateContainer extends PureComponent {
     }
 
     render() {
-        const { className, children } = this.props;
+        const { className, children, attrs } = this.props;
+        const templateWrapperStyle = { height: attrs.height, width: attrs.width };
+        const templateContainerStyle = { transform: `scale(${attrs.scale})`, transformOrigin: 'top left' };
+
 
         /* eslint-disable jsx-a11y/no-static-element-interactions */
         return (
-            <div className="template-wrapper">
+            <div className="template-wrapper" style={templateWrapperStyle}>
                 <div className="template-bg-btns">
                     <Tooltip title="更改背景颜色">
                         <div className="img-wrapper" onClick={::this._toggleBgColorSelector}>
@@ -60,7 +63,7 @@ export default class TemplateContainer extends PureComponent {
                         </div>
                     </Tooltip>
                 </div>
-                <div className={`template-container ${className}`}>
+                <div className={`template-container ${className}`} style={templateContainerStyle}>
                     {children.map((child, index) => {
                         return React.createElement(child, { key: index });
                     })}

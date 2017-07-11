@@ -44,5 +44,27 @@ export default {
 
         const data = await fetch(request);
         return data;
+    },
+
+    queryCategory: async (templateElementId) => {
+        const request = {
+            url: '/api/query_queryCategory',
+            data: {
+                templateElementId
+            }
+        };
+
+        const data = await fetch(request);
+        return data;
+    },
+
+    queryImgResource: async (categoryData) => {
+        const request = {
+            url: '/api/query_queryImgResource',
+            data: categoryData
+        };
+
+        const data = await fetch(request);
+        return data;
     }
 };

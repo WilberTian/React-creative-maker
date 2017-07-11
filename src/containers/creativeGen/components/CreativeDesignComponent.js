@@ -6,6 +6,7 @@ import DomainMapper from '../../../utils/DomainMapper';
 
 import TemplateContainer from './TemplateContainer';
 import TemplateImageComponent from './TemplateImageComponent';
+import TemplateMaterialComponent from './TemplateMaterialComponent';
 import TemplateTextComponent from './TemplateTextComponent';
 
 const mapper = {
@@ -32,6 +33,7 @@ export default class CreativeDesignComponent extends PureComponent {
         this.tplElementMapper = {
             TemplateContainer,
             TemplateImageComponent,
+            TemplateMaterialComponent,
             TemplateTextComponent
         };
     }

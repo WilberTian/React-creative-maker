@@ -28,14 +28,12 @@
                 "elementList": [
                     {
                         "elementId": 1,
-                        "type":"TemplateImageComponent",
+                        "type":"TemplateMaterialComponent",
                         "field":"elementUrl",
                         "elementList": [],
                         "attrs": {
-                            
                             "width":90,
                             "height":34,
-                            "maxFileSize":100,
                             "src":"",
                             "placeholder": "选择素材图片"
                         },

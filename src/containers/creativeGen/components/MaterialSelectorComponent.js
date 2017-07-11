@@ -1,0 +1,75 @@
+import React, { PureComponent } from 'react';
+import { Modal, Button } from 'antd';
+
+import MaterialCategoryComponent from './MaterialCategoryComponent';
+import MaterialListComponent from './MaterialListComponent';
+
+import './material-selector-component.less';
+
+export default class MaterialSelectorComponent extends PureComponent {
+    constructor(props) {
+        super(props);
+        this.state = {
+            materialImgList: [],
+            selectedMaterialImg: null
+        };
+    }
+
+    _handleOk(e) {
+        const { toggleVisible, onChange } = this.props;
+        onChange(this.state.selectedMaterialImg);
+        toggleVisible();
+    }
+
+    _handleCancel(e) {
+        const { toggleVisible } = this.props;
+        toggleVisible();
+    }
+
+    _setMaterialImgList(imgList) {
+        this.setState({
+            materialImgList: imgList
+        });
+    }
+
+    _setSelectedMaterialImg(materialImg) {
+        this.setState({
+            selectedMaterialImg: materialImg
+        });
+    }
+
+    render() {
+        const { templateElementId } = this.props;
+
+        return (
+            <div>
+                <Modal
+                  title="选择素材图片"
+                  visible={this.props.visible}
+                  onOk={::this._handleOk}
+                  onCancel={::this._handleCancel}
+                  width="680px"
+                  footer={[
+                      <Button key="submit" size="large" onClick={::this._handleOk}>
+                          确认
+                      </Button>,
+                      <Button key="back" size="large" onClick={::this._handleCancel}>
+                          取消
+                      </Button>
+                  ]}
+                  wrapClassName="material-selector-component"
+                >
+                    <MaterialCategoryComponent
+                      setMaterialImgList={::this._setMaterialImgList}
+                      templateElementId={templateElementId}
+                    />
+                    <MaterialListComponent
+                      materialImgList={this.state.materialImgList}
+                      selectedMaterialImg={this.state.selectedMaterialImg}
+                      setSelectedMaterialImg={::this._setSelectedMaterialImg}
+                    />
+                </Modal>
+            </div>
+        );
+    }
+}

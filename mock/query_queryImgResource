@@ -1,0 +1,21 @@
+{
+    "code":0,
+    "data": {
+        "list": [
+             {
+                "imgUrl":"http://imga999.5054399.com/upload_pic/2014/12/5/4399_15511656290.jpg",
+                "resourceId":1
+            },
+             {
+                "imgUrl":"http://imga999.5054399.com/upload_pic/2015/10/3/4399_16094037103.jpg",
+                "resourceId":6
+            },
+             {
+                "imgUrl":"http://imga999.5054399.com/upload_pic/2011/2/23/4399_15351631211.jpg",
+                "resourceId":7
+            }
+        ]
+    },
+    "message":"获取素材信息成功",
+    "success":true
+}

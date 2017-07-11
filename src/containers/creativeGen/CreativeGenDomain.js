@@ -34,7 +34,8 @@ const domain = {
         choosenCreativeTplId: null,
         choosenCreativeTplItem: null,
         bgImgList: [],
-        bgItem: null
+        bgItem: null,
+        categoryList: []
     },
 
     action: {
@@ -117,6 +118,24 @@ const domain = {
                 choosenCreativeTplItem: utils.addRestrict4Elements(domain.model.choosenCreativeTplItem,
                     result.rules)
             });
+        },
+
+        queryCategory: async (templateElementId) => {
+            const result = await services.queryCategory(templateElementId);
+
+            domain.dispatch({
+                ...domain.model,
+                categoryList: result.list
+            });
+        },
+
+        queryImgResource: async (templateElementId, subCategoryId) => {
+            const result = await services.queryImgResource({
+                templateElementId,
+                categoryId: subCategoryId
+            });
+
+            return result;
         }
     }
 };

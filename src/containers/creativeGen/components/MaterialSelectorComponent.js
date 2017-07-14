@@ -6,36 +6,27 @@ import MaterialListComponent from './MaterialListComponent';
 
 import './material-selector-component.less';
 
+import DomainComponentCreator from '../../../utils/DomainComponentCreator';
+import MaterialSelectorDomain from './MaterialSelectorDomain';
+
+@DomainComponentCreator(MaterialSelectorDomain)
 export default class MaterialSelectorComponent extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            materialImgList: [],
             selectedMaterialImg: null
         };
     }
 
     _handleOk(e) {
-        const { toggleVisible, onChange } = this.props;
-        onChange(this.state.selectedMaterialImg);
+        const { toggleVisible, onChange, model } = this.props;
+        onChange(model.selectedMaterialImg);
         toggleVisible();
     }
 
     _handleCancel(e) {
         const { toggleVisible } = this.props;
         toggleVisible();
-    }
-
-    _setMaterialImgList(imgList) {
-        this.setState({
-            materialImgList: imgList
-        });
-    }
-
-    _setSelectedMaterialImg(materialImg) {
-        this.setState({
-            selectedMaterialImg: materialImg
-        });
     }
 
     render() {
@@ -59,15 +50,8 @@ export default class MaterialSelectorComponent extends PureComponent {
                   ]}
                   wrapClassName="material-selector-component"
                 >
-                    <MaterialCategoryComponent
-                      setMaterialImgList={::this._setMaterialImgList}
-                      templateElementId={templateElementId}
-                    />
-                    <MaterialListComponent
-                      materialImgList={this.state.materialImgList}
-                      selectedMaterialImg={this.state.selectedMaterialImg}
-                      setSelectedMaterialImg={::this._setSelectedMaterialImg}
-                    />
+                    <MaterialCategoryComponent templateElementId={templateElementId} />
+                    <MaterialListComponent />
                 </Modal>
             </div>
         );

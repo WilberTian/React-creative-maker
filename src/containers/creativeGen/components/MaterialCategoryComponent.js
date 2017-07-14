@@ -7,6 +7,7 @@ import DomainMapper from '../../../utils/DomainMapper';
 const mapper = {
     modelMapper: (model) => {
         return {
+            selectedSubCategory: model.selectedSubCategory,
             categoryList: model.categoryList
         };
     },
@@ -20,13 +21,6 @@ const mapper = {
 
 @DomainMapper(mapper)
 export default class MaterialCategoryComponent extends PureComponent {
-    constructor(props) {
-        super(props);
-        this.state = {
-            selectedSubCategory: ''
-        };
-    }
-
     componentWillMount() {
         this._queryCategoryList();
     }
@@ -37,26 +31,21 @@ export default class MaterialCategoryComponent extends PureComponent {
     }
 
     async _queryImgResource(subCategoryId) {
-        this.setState({
-            selectedSubCategory: subCategoryId
-        });
-
-        const { queryImgResource, setMaterialImgList, templateElementId } = this.props;
-        const result = await queryImgResource(templateElementId, subCategoryId);
-        setMaterialImgList(result.list);
+        const { queryImgResource, templateElementId } = this.props;
+        await queryImgResource(templateElementId, subCategoryId);
     }
-
+    /* eslint-disable jsx-a11y/no-static-element-interactions */
     render() {
         const Panel = Collapse.Panel;
-        const { categoryList } = this.props;
+        const { categoryList, selectedSubCategory } = this.props;
         const categoryComps = [];
-        /* eslint-disable jsx-a11y/no-static-element-interactions */
+
         categoryList.forEach((category) => {
             const subCategoryComps = [];
             category.children.forEach((child) => {
                 const subCategoryClass = cx({
                     'sub-category-item': true,
-                    active: child.value === this.state.selectedSubCategory
+                    active: child.value === selectedSubCategory
                 });
 
                 subCategoryComps.push(
@@ -72,7 +61,7 @@ export default class MaterialCategoryComponent extends PureComponent {
 
             categoryComps.push(<Panel key={category.value} header={category.text}>{subCategoryComps}</Panel>);
         });
-        /* eslint-enable jsx-a11y/no-static-element-interactions */
+
         return (
             <div className="material-category-component">
                 <Collapse accordion>
@@ -81,4 +70,5 @@ export default class MaterialCategoryComponent extends PureComponent {
             </div>
         );
     }
+    /* eslint-enable jsx-a11y/no-static-element-interactions */
 }
